@@ -1,0 +1,2 @@
+D:\Kod\C++\homework\Debug\homework.exe
+D:\Kod\C++\homework\Debug\homework.pdb
