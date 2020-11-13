@@ -4,33 +4,33 @@
 #include <iostream>
 #include "CTable.h"
 
-int main()
-{
-	CTable tab1("1", 5);
-	CTable tab2("2", 7);
-	CTable tab3("3", 8);
-
-	tab1.vPrint();
-	tab2.vPrint();
-	tab3.vPrint();
-
-	tab3 = tab1 + tab2;
-
-	tab3.vPrint();
-
-	tab3--.vPrint();
-	
-	//CTable c_tab_0, c_tab_1;
-	//c_tab_0.bSetNewSize(6);
-	//c_tab_1.bSetNewSize(4);
-	///* initialize table */
-	//c_tab_0 = c_tab_1;
-	//c_tab_1.vSetValueAt(2, 123);
-	//c_tab_0.vPrint();
-	//c_tab_1.vPrint();
-	//c_tab_1 = c_tab_1 + c_tab_1;
-	//c_tab_1.vPrint();
-}
+//int main()
+//{
+//	CTable tab1("1", 5);
+//	CTable tab2("2", 7);
+//	CTable tab3("3", 8);
+//
+//	tab1.vPrint();
+//	tab2.vPrint();
+//	tab3.vPrint();
+//
+//	tab3 = tab1 + tab2;
+//
+//	tab3.vPrint();
+//
+//	tab3--.vPrint();
+//
+//	//CTable c_tab_0, c_tab_1;
+//	//c_tab_0.bSetNewSize(6);
+//	//c_tab_1.bSetNewSize(4);
+//	///* initialize table */
+//	//c_tab_0 = c_tab_1;
+//	//c_tab_1.vSetValueAt(2, 123);
+//	//c_tab_0.vPrint();
+//	//c_tab_1.vPrint();
+//	//c_tab_1 = c_tab_1 + c_tab_1;
+//	//c_tab_1.vPrint();
+//}
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
 // Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie

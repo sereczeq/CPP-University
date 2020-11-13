@@ -1,0 +1,8 @@
+﻿  lab3.cpp
+D:\Kod\C++\homework\lab3\NodeDynamic.cpp(47,22): warning C4018: '<': signed/unsigned mismatch
+D:\Kod\C++\homework\lab3\NodeDynamic.cpp(65,22): warning C4018: '<': signed/unsigned mismatch
+D:\Kod\C++\homework\lab3\NodeStatic.cpp(44,19): warning C4018: '<': signed/unsigned mismatch
+D:\Kod\C++\homework\lab3\NodeStatic.cpp(43): message : while compiling class template member function 'NodeStatic<int> *NodeStatic<int>::getChild(int)'
+D:\Kod\C++\homework\lab3\lab3.cpp(22): message : see reference to function template instantiation 'NodeStatic<int> *NodeStatic<int>::getChild(int)' being compiled
+D:\Kod\C++\homework\lab3\lab3.cpp(18): message : see reference to class template instantiation 'NodeStatic<int>' being compiled
+  lab3.vcxproj -> D:\Kod\C++\homework\Debug\lab3.exe

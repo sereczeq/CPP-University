@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Kod/C++/homework/lab3/NodeDynamic.cpp
+NodeDynamic.h
+D:/Kod/C++/homework/lab3/NodeDynamic.h
+
+D:/Kod/C++/homework/lab3/NodeDynamic.h
+iostream
+-
+vector
+-
+
+D:/Kod/C++/homework/lab3/NodeStatic.cpp
+NodeStatic.h
+D:/Kod/C++/homework/lab3/NodeStatic.h
+
+D:/Kod/C++/homework/lab3/NodeStatic.h
+iostream
+-
+vector
+-
+
+D:/Kod/C++/homework/lab3/TreeDynamic.h
+NodeDynamic.h
+D:/Kod/C++/homework/lab3/NodeDynamic.h
+
+D:/Kod/C++/homework/lab3/lab3.cpp
+iostream
+-
+NodeStatic.cpp
+D:/Kod/C++/homework/lab3/NodeStatic.cpp
+NodeDynamic.cpp
+D:/Kod/C++/homework/lab3/NodeDynamic.cpp
+TreeDynamic.h
+D:/Kod/C++/homework/lab3/TreeDynamic.h
+
