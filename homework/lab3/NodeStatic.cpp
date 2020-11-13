@@ -68,3 +68,23 @@ void NodeStatic<T>::printUp()
 	if (parent == 0) return;
 	parent->printUp();
 }
+
+template<typename T>
+void NodeStatic<T>::addNewChild(NodeStatic<T> newChild) {
+	newChild.parent = this;
+	children.push_back(newChild);
+}
+
+//***** ***
+template<typename T>
+bool NodeStatic<T>::deleteChild(NodeStatic<T> toDelete) {
+	for(int i = 0; i < children.size(); i++)
+	{
+		if (children[i] == toDelete)
+		{
+			children.erase(children.begin(), i);
+			return true;
+		}
+	}
+	return false;
+}

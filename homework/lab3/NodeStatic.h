@@ -13,6 +13,8 @@ public:
 	void setValue(T iNewVal);
 	int getChildrenNumber();
 	void addNewChild();
+    void addNewChild(NodeStatic<T> newChild);
+	bool deleteChild(NodeStatic<T> toDelete);
 	NodeStatic* getChild(int iChildOffset);
 	void print() const;
 	void printAllBelow();

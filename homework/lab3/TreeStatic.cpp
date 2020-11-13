@@ -21,3 +21,8 @@ template<typename  T>
 NodeStatic<T> *TreeStatic<T>::getRoot() {
     return root_;
 }
+template <typename T>
+bool TreeStatic<T>::moveSubTree(NodeStatic<T> parentNode, NodeStatic<T> newChild, NodeStatic<T> parentNode2) {
+    parentNode.addNewChild(newChild);
+    return parentNode2.deleteChild(newChild);
+}
