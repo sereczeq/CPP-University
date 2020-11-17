@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Kod/C++/homework/lab3/lab3.cpp" "D:/Kod/C++/cmake-build-debug/CMakeFiles/C__.dir/homework/lab3/lab3.cpp.obj"
   "D:/Kod/C++/lab1 task4 CTable/CTable.cpp" "D:/Kod/C++/cmake-build-debug/CMakeFiles/C__.dir/lab1_task4_CTable/CTable.cpp.obj"
   "D:/Kod/C++/lab1 task4 CTable/lab1 task4 CTable.cpp" "D:/Kod/C++/cmake-build-debug/CMakeFiles/C__.dir/lab1_task4_CTable/lab1_task4_CTable.cpp.obj"
+  "D:/Kod/C++/lab1 task4 CTable/test.cpp" "D:/Kod/C++/cmake-build-debug/CMakeFiles/C__.dir/lab1_task4_CTable/test.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

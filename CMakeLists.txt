@@ -17,4 +17,4 @@ add_executable(C__
         "lab1 task4 CTable/CTable.h"
         "lab1 task4 CTable/lab1 task4 CTable.cpp"
         "lab1 task4 CTable/resource.h"
-        )
+        "lab1 task4 CTable/test.cpp")

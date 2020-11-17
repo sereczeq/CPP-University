@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/C__.dir/homework/lab3/lab3.cpp.obj"
   "CMakeFiles/C__.dir/lab1_task4_CTable/CTable.cpp.obj"
   "CMakeFiles/C__.dir/lab1_task4_CTable/lab1_task4_CTable.cpp.obj"
+  "CMakeFiles/C__.dir/lab1_task4_CTable/test.cpp.obj"
   "C__.exe"
   "C__.exe.manifest"
   "C__.lib"

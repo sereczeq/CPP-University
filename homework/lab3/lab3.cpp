@@ -11,7 +11,7 @@ void v_tree_test_dynamic();
 int main()
 {
     v_tree_test();
-	v_tree_test_dynamic();
+	//v_tree_test_dynamic();
 }
 
 void v_tree_test()

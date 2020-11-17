@@ -262,6 +262,33 @@ lab1_task4_CTable\lab1_task4_CTable.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\C__.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\C__.dir\lab1_task4_CTable\lab1_task4_CTable.cpp.s
 .PHONY : lab1_task4_CTable\lab1_task4_CTable.cpp.s
 
+lab1_task4_CTable\test.obj: lab1_task4_CTable\test.cpp.obj
+
+.PHONY : lab1_task4_CTable\test.obj
+
+# target to build an object file
+lab1_task4_CTable\test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C__.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\C__.dir\lab1_task4_CTable\test.cpp.obj
+.PHONY : lab1_task4_CTable\test.cpp.obj
+
+lab1_task4_CTable\test.i: lab1_task4_CTable\test.cpp.i
+
+.PHONY : lab1_task4_CTable\test.i
+
+# target to preprocess a source file
+lab1_task4_CTable\test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C__.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\C__.dir\lab1_task4_CTable\test.cpp.i
+.PHONY : lab1_task4_CTable\test.cpp.i
+
+lab1_task4_CTable\test.s: lab1_task4_CTable\test.cpp.s
+
+.PHONY : lab1_task4_CTable\test.s
+
+# target to generate assembly for a file
+lab1_task4_CTable\test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C__.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\C__.dir\lab1_task4_CTable\test.cpp.s
+.PHONY : lab1_task4_CTable\test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -286,6 +313,9 @@ help:
 	@echo ... lab1_task4_CTable/lab1_task4_CTable.obj
 	@echo ... lab1_task4_CTable/lab1_task4_CTable.i
 	@echo ... lab1_task4_CTable/lab1_task4_CTable.s
+	@echo ... lab1_task4_CTable/test.obj
+	@echo ... lab1_task4_CTable/test.i
+	@echo ... lab1_task4_CTable/test.s
 .PHONY : help
 
 

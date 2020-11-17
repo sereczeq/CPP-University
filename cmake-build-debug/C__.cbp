@@ -115,6 +115,9 @@
 		<Unit filename="D:/Kod/C++/lab1 task4 CTable/resource.h">
 			<Option target="C__"/>
 		</Unit>
+		<Unit filename="D:/Kod/C++/lab1 task4 CTable/test.cpp">
+			<Option target="C__"/>
+		</Unit>
 		<Unit filename="D:/Kod/C++/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
