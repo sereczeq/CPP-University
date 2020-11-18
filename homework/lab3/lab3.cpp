@@ -131,7 +131,6 @@ void swap_test_dynamic()
     cout<<endl<<"printing tree dynamic"<<endl;
     treeDynamic.printTree();
 
-    treeDynamic.~TreeDynamic();
     c_root.~NodeDynamic();
 }
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
