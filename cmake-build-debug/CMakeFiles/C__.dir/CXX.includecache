@@ -30,6 +30,14 @@ D:/Kod/C++/homework/lab3/TreeDynamic.h
 NodeDynamic.h
 D:/Kod/C++/homework/lab3/NodeDynamic.h
 
+D:/Kod/C++/homework/lab3/TreeStatic.cpp
+TreeStatic.h
+D:/Kod/C++/homework/lab3/TreeStatic.h
+
+D:/Kod/C++/homework/lab3/TreeStatic.h
+NodeStatic.h
+D:/Kod/C++/homework/lab3/NodeStatic.h
+
 D:/Kod/C++/homework/lab3/lab3.cpp
 iostream
 -
@@ -39,4 +47,6 @@ NodeDynamic.cpp
 D:/Kod/C++/homework/lab3/NodeDynamic.cpp
 TreeDynamic.h
 D:/Kod/C++/homework/lab3/TreeDynamic.h
+TreeStatic.cpp
+D:/Kod/C++/homework/lab3/TreeStatic.cpp
 

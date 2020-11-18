@@ -15,8 +15,7 @@ NodeStatic<T>::NodeStatic(NodeStatic* parent)
 
 template< typename T >
 NodeStatic<T>::~NodeStatic()
-{
-}
+= default;
 
 
 template< typename T >
@@ -78,13 +77,16 @@ void NodeStatic<T>::addNewChild(NodeStatic<T> newChild) {
 //***** ***
 template<typename T>
 bool NodeStatic<T>::deleteChild(NodeStatic<T> toDelete) {
-	for(int i = 0; i < children.size(); i++)
-	{
-		if (children[i] == toDelete)
-		{
-			children.erase(children.begin(), i);
-			return true;
-		}
-	}
+    auto it = find(children.begin(), children.end(), toDelete);
+    if(it != children.end())
+    {
+        children.erase(it);
+        return true;
+    }
 	return false;
+}
+
+template<typename T>
+bool NodeStatic<T>::operator==(NodeStatic other) {
+    return parent == other.parent && val == other.val;
 }

@@ -13,6 +13,8 @@ CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\NodeDynamic.h
 CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\NodeStatic.cpp
 CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\NodeStatic.h
 CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\TreeDynamic.h
+CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\TreeStatic.cpp
+CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\TreeStatic.h
 CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\lab3.cpp
 
 CMakeFiles\C__.dir\lab1_task4_CTable\CTable.cpp.obj: "..\lab1 task4 CTable\CTable.cpp"
@@ -20,4 +22,6 @@ CMakeFiles\C__.dir\lab1_task4_CTable\CTable.cpp.obj: "..\lab1 task4 CTable\CTabl
 
 CMakeFiles\C__.dir\lab1_task4_CTable\lab1_task4_CTable.cpp.obj: "..\lab1 task4 CTable\CTable.h"
 CMakeFiles\C__.dir\lab1_task4_CTable\lab1_task4_CTable.cpp.obj: "..\lab1 task4 CTable\lab1 task4 CTable.cpp"
+
+CMakeFiles\C__.dir\lab1_task4_CTable\test.cpp.obj: "..\lab1 task4 CTable\test.cpp"
 

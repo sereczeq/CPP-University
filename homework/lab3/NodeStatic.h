@@ -19,6 +19,7 @@ public:
 	void print() const;
 	void printAllBelow();
 	void printUp();
+	bool operator == (NodeStatic other);
 private:
 	vector<NodeStatic> children;
 	T val;

@@ -14,6 +14,8 @@ CMakeFiles/C__.dir/homework/lab3/lab3.cpp.obj
  D:/Kod/C++/homework/lab3/NodeStatic.cpp
  D:/Kod/C++/homework/lab3/NodeStatic.h
  D:/Kod/C++/homework/lab3/TreeDynamic.h
+ D:/Kod/C++/homework/lab3/TreeStatic.cpp
+ D:/Kod/C++/homework/lab3/TreeStatic.h
  D:/Kod/C++/homework/lab3/lab3.cpp
 CMakeFiles/C__.dir/lab1_task4_CTable/CTable.cpp.obj
  D:/Kod/C++/lab1 task4 CTable/CTable.cpp
@@ -21,3 +23,5 @@ CMakeFiles/C__.dir/lab1_task4_CTable/CTable.cpp.obj
 CMakeFiles/C__.dir/lab1_task4_CTable/lab1_task4_CTable.cpp.obj
  D:/Kod/C++/lab1 task4 CTable/CTable.h
  D:/Kod/C++/lab1 task4 CTable/lab1 task4 CTable.cpp
+CMakeFiles/C__.dir/lab1_task4_CTable/test.cpp.obj
+ D:/Kod/C++/lab1 task4 CTable/test.cpp

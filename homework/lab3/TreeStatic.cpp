@@ -3,7 +3,7 @@
 template <typename T>
 TreeStatic<T>::TreeStatic()
 {
-    root_ = NodeStatic<T>();
+    root_ = new NodeStatic<T>();
 }
 
 template <typename T>
@@ -23,6 +23,8 @@ NodeStatic<T> *TreeStatic<T>::getRoot() {
 }
 template <typename T>
 bool TreeStatic<T>::moveSubTree(NodeStatic<T> parentNode, NodeStatic<T> newChild, NodeStatic<T> parentNode2) {
+    root_->deleteChild(parentNode);
     parentNode.addNewChild(newChild);
+    root_->addNewChild(parentNode);
     return parentNode2.deleteChild(newChild);
 }
