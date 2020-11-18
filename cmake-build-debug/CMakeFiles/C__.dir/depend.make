@@ -12,6 +12,7 @@ CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\NodeDynamic.cpp
 CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\NodeDynamic.h
 CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\NodeStatic.cpp
 CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\NodeStatic.h
+CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\TreeDynamic.cpp
 CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\TreeDynamic.h
 CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\TreeStatic.cpp
 CMakeFiles\C__.dir\homework\lab3\lab3.cpp.obj: ..\homework\lab3\TreeStatic.h

@@ -4,39 +4,19 @@
 #include <iostream>
 #include "NodeStatic.cpp"
 #include "NodeDynamic.cpp"
-#include "TreeDynamic.h"
+#include "TreeDynamic.cpp"
 #include "TreeStatic.cpp"
 
 void v_tree_test();
 void v_tree_test_dynamic();
+void swap_test();
+void swap_test_dynamic();
 int main()
 {
     v_tree_test();
 	v_tree_test_dynamic();
-
-    NodeStatic<int> c_root;
-    c_root.addNewChild();
-    c_root.addNewChild();
-
-    c_root.getChild(0)->setValue(1);
-    c_root.getChild(1)->setValue(2);
-
-    c_root.getChild(0)->addNewChild();
-    c_root.getChild(0)->addNewChild();
-
-    c_root.getChild(0)->getChild(0)->setValue(11);
-    c_root.getChild(0)->getChild(1)->setValue(12);
-
-    c_root.getChild(1)->addNewChild();
-    c_root.getChild(1)->addNewChild();
-
-    c_root.getChild(1)->getChild(0)->setValue(21);
-    c_root.getChild(1)->getChild(1)->setValue(22);
-
-	TreeStatic<int> treeStatic;
-	treeStatic.moveSubTree(treeStatic.getRoot(), c_root, c_root);
-	cout<<endl<<"printing the tree"<<endl;
-	treeStatic.printTree();
+    swap_test();
+    swap_test_dynamic();
 }
 
 void v_tree_test()
@@ -93,6 +73,67 @@ void v_tree_test_dynamic()
 
     c_root.~NodeDynamic();
 }//void v_tree_test()
+
+void swap_test()
+{
+
+    NodeStatic<int> c_root;
+    c_root.addNewChild();
+    c_root.addNewChild();
+
+    c_root.getChild(0)->setValue(1);
+    c_root.getChild(1)->setValue(2);
+
+    c_root.getChild(0)->addNewChild();
+    c_root.getChild(0)->addNewChild();
+
+    c_root.getChild(0)->getChild(0)->setValue(11);
+    c_root.getChild(0)->getChild(1)->setValue(12);
+
+    c_root.getChild(1)->addNewChild();
+    c_root.getChild(1)->addNewChild();
+
+    c_root.getChild(1)->getChild(0)->setValue(21);
+    c_root.getChild(1)->getChild(1)->setValue(22);
+
+    TreeStatic<int> treeStatic;
+    treeStatic.moveSubTree(treeStatic.getRoot(), c_root, c_root);
+    cout<<endl<<"printing the tree"<<endl;
+    treeStatic.printTree();
+}
+
+void swap_test_dynamic()
+{
+    NodeDynamic c_root;
+    c_root.addNewChild();
+    c_root.addNewChild();
+
+    c_root.getChild(0)->setValue(1);
+    c_root.getChild(1)->setValue(2);
+
+    c_root.getChild(0)->addNewChild();
+    c_root.getChild(0)->addNewChild();
+
+    c_root.getChild(0)->getChild(0)->setValue(11);
+    c_root.getChild(0)->getChild(1)->setValue(12);
+
+    c_root.getChild(1)->addNewChild();
+    c_root.getChild(1)->addNewChild();
+
+    c_root.getChild(1)->getChild(0)->setValue(21);
+    c_root.getChild(1)->getChild(1)->setValue(22);
+
+    cout <<endl<< "all below" << endl;
+    c_root.printAllBelow();
+
+    TreeDynamic treeDynamic;
+    treeDynamic.moveSubTree(treeDynamic.getRoot(), &c_root, &c_root);
+    cout<<endl<<"printing tree dynamic"<<endl;
+    treeDynamic.printTree();
+
+    treeDynamic.~TreeDynamic();
+    c_root.~NodeDynamic();
+}
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
 // Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
 

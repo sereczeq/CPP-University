@@ -26,6 +26,10 @@ iostream
 vector
 -
 
+D:/Kod/C++/homework/lab3/TreeDynamic.cpp
+TreeDynamic.h
+D:/Kod/C++/homework/lab3/TreeDynamic.h
+
 D:/Kod/C++/homework/lab3/TreeDynamic.h
 NodeDynamic.h
 D:/Kod/C++/homework/lab3/NodeDynamic.h
@@ -45,8 +49,8 @@ NodeStatic.cpp
 D:/Kod/C++/homework/lab3/NodeStatic.cpp
 NodeDynamic.cpp
 D:/Kod/C++/homework/lab3/NodeDynamic.cpp
-TreeDynamic.h
-D:/Kod/C++/homework/lab3/TreeDynamic.h
+TreeDynamic.cpp
+D:/Kod/C++/homework/lab3/TreeDynamic.cpp
 TreeStatic.cpp
 D:/Kod/C++/homework/lab3/TreeStatic.cpp
 
