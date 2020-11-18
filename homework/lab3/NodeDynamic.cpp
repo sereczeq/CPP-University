@@ -48,6 +48,7 @@ bool NodeDynamic::deleteChild(NodeDynamic *toDelete) {
     {
         if (children[i] == toDelete)
         {
+            children[i]->~NodeDynamic();
             delete children[i];
             children.erase(children.begin() + i);
             return true;
