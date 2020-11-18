@@ -90,7 +90,6 @@ template<typename T>
 bool NodeStatic<T>::operator==(NodeStatic other) {
     return parent == other.parent && val == other.val;
 }
-
 template<typename T>
 int NodeStatic<T>::countOccurrences(T elem) {
     int howMany = 0;
@@ -98,3 +97,5 @@ int NodeStatic<T>::countOccurrences(T elem) {
     for (auto child : children) howMany += child.countOccurrences(elem);
     return howMany;
 }
+
+
