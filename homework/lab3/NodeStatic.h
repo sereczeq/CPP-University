@@ -19,6 +19,7 @@ public:
 	void print() const;
 	void printAllBelow();
 	void printUp();
+    int countOccurrences(T elem);
 	bool operator == (NodeStatic other);
 private:
 	vector<NodeStatic> children;

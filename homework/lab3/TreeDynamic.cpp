@@ -9,8 +9,8 @@ TreeDynamic::TreeDynamic() {
 }
 
 TreeDynamic::~TreeDynamic() {
-    //root->~NodeDynamic();
-    //delete root;
+    root = NULL;
+    delete root;
 }
 
 NodeDynamic *TreeDynamic::getRoot() {
