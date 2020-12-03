@@ -1,5 +1,4 @@
 ﻿  NodeStatic.cpp
-  TreeStatic.cpp
   lab3.cpp
 D:\Kod\C++\homework\lab3\NodeDynamic.cpp(47,22): warning C4018: '<': signed/unsigned mismatch
 D:\Kod\C++\homework\lab3\NodeDynamic.cpp(66,22): warning C4018: '<': signed/unsigned mismatch
@@ -8,5 +7,4 @@ D:\Kod\C++\homework\lab3\NodeStatic.cpp(42): message : while compiling class tem
 D:\Kod\C++\homework\lab3\lab3.cpp(31): message : see reference to function template instantiation 'NodeStatic<int> *NodeStatic<int>::getChild(int)' being compiled
 D:\Kod\C++\homework\lab3\lab3.cpp(27): message : see reference to class template instantiation 'NodeStatic<int>' being compiled
   Generating Code...
-  LINK : D:\Kod\C++\homework\Debug\lab3.exe not found or not built by the last incremental link; performing full link
   lab3.vcxproj -> D:\Kod\C++\homework\Debug\lab3.exe
