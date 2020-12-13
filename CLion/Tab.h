@@ -94,7 +94,7 @@ public:
     bool setSize(int newSize)
     {
         if(newSize < size) return false;
-        int *newTab = new int[newSize];
+        int *newTab = new int[newSize]{0};
         for(int i = 0; i < size; i++)
         {
             newTab[i] = tab[i];

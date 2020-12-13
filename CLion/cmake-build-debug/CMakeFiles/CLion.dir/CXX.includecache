@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Kod/C++/CLion/CTable.h
+iostream
+-
+utility
+-
+
+D:/Kod/C++/CLion/SmartPointer.h
+print.h
+D:/Kod/C++/CLion/print.h
+
+D:/Kod/C++/CLion/Tab.h
+print.h
+D:/Kod/C++/CLion/print.h
+
+D:/Kod/C++/CLion/main.cpp
+iostream
+-
+SmartPointer.h
+D:/Kod/C++/CLion/SmartPointer.h
+Tab.h
+D:/Kod/C++/CLion/Tab.h
+print.h
+D:/Kod/C++/CLion/print.h
+CTable.h
+D:/Kod/C++/CLion/CTable.h
+
+D:/Kod/C++/CLion/print.h
+
