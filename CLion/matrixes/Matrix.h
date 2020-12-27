@@ -46,6 +46,12 @@ public:
         return {result, height, width};
     }
 
+    Matrix inverse()
+    {
+        if(width != height) return *this; //TODO add an exception
+        
+    }
+
     Matrix operator + (Matrix &other)
     {
         if(width != other.width || height != other.height) return *this; //TODO add an exception
