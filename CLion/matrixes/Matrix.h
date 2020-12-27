@@ -15,6 +15,52 @@ private:
     T** array;
     int width;
     int height;
+
+    class Determinant
+    {
+    public:
+        static int calculateDeterminant(T ** array, int width, int height)
+        {
+            if(width != height) return 0; //TODO thrown an exception
+            if(width == 1) return array[0][0];
+            else if(width == 2) return array[0][0] * array[1][1] - array[0][1] * array[1][0];
+            else
+            {
+                int determinant = 0;
+                for(int i= 0; i < width; i++)
+                {
+                    int sign = 1;
+                    if(i % 2 == 1) sign = -1;
+                    determinant += sign * array[0][i] *calculateDeterminant(getArrayWithout(array, width, height, 0, i), width - 1, height - 1);
+                }
+                return determinant;
+            }
+        }
+
+    private:
+        static T ** getArrayWithout(T** array, int width, int height, int row, int column)
+        {
+            //create new array
+            T** result = new T*[--height];
+            for(int i = 0; i < height; i++)
+            {
+                result[i] = new T[width - 1];
+            }
+
+            //copy contents (except this one row an column)
+            for(int i = 0, x = 0; i < height; i++, x++)
+            {
+                if (i == row) x++; // skip the row
+                for (int j = 0, y = 0; j < width - 1; j++, y++)
+                {
+                    if (j == column) y++; // skip the column
+                    result[i][j] = array[x][y];
+                }
+            }
+
+            return result;
+        }
+    };
 public:
     Matrix(T **array, int width, int height) : array(array), width(width), height(height)
     {
@@ -46,11 +92,20 @@ public:
         return {result, height, width};
     }
 
-    Matrix inverse()
+    int determinant()
     {
-        if(width != height) return *this; //TODO add an exception
-        
+        return Determinant().calculateDeterminant(array, width, height);
     }
+
+//    Matrix inverse()
+//    {
+//        if(width != height) return *this; //TODO add an exception
+//        T ** result = newArray();
+//        for(int i = 0; i < height; i++)
+//        {
+//            for()
+//        }
+//    }
 
     Matrix operator + (Matrix &other)
     {
