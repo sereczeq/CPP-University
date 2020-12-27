@@ -17,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CLion.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CLion.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matrixes/Matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/matrixes/Matrix.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +79,7 @@
       <workItem from="1607862797323" duration="8634000" />
       <workItem from="1608109974475" duration="4938000" />
       <workItem from="1608633417151" duration="3477000" />
-      <workItem from="1609066164672" duration="4922000" />
+      <workItem from="1609066164672" duration="8130000" />
     </task>
     <servers />
   </component>

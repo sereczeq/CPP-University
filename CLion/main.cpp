@@ -99,22 +99,23 @@ int main() {
 //Matrix matrix(array, 3, 2);
 //print(matrix);
 
-int ** array1 = new int * [] {new int[]{11, 12, 13, 14},
-                              new int[]{15, 16, 17, 18}};
-int ** array2 = new int* [] {new int[]{21, 22, 23},
-                             new int[]{24, 25, 26},
-                             new int[]{27, 28, 29},
-                             new int[]{210, 211, 212}};
-Matrix matrix1(array1, 4, 2);
-Matrix matrix2(array2, 3, 4);
+//int ** array1 = new int * [] {new int[]{11, 12, 13, 14},
+//                              new int[]{15, 16, 17, 18}};
+//int ** array2 = new int* [] {new int[]{21, 22, 23},
+//                             new int[]{24, 25, 26},
+//                             new int[]{27, 28, 29},
+//                             new int[]{210, 211, 212}};
+//Matrix matrix1(array1, 4, 2);
+//Matrix matrix2(array2, 3, 4);
 
 
-//Matrix matrix1(new int* [] {new int[]{1, 2}, new int[]{3, 4}}, 2, 2);
-//Matrix matrix2(new int* [] {new int[]{5, 6}, new int[]{7, 8}}, 2, 2);
+Matrix<char> matrix1(new char* [] {new char[]{'a', 'b'}, new char[]{'c', 'd'}}, 2, 2);
+Matrix<char> matrix2(new char* [] {new char[]{'e', 'f'}, new char[]{'g', 'h'}}, 2, 2);
 print(matrix1);
 print(matrix2);
-print(matrix1.operator*(matrix2));
 print(matrix1 * 2);
+print(matrix1.transpose());
+print(matrix1 * matrix2);
 
 return 0;
 }

@@ -6,19 +6,24 @@
 #define CLION_MATRIX_H
 
 #include<iostream>
+#include <type_traits>
 #include "../print.h"
+template<typename T>
 class Matrix
 {
 private:
-    int** array;
+    T** array;
     int width;
     int height;
 public:
-    Matrix(int **array, int width, int height) : array(array), width(width), height(height)
-    {}
+    Matrix(T **array, int width, int height) : array(array), width(width), height(height)
+    {
+        static_assert(std::is_arithmetic_v<T> , "Wrong type given. Matrix can't be created");
+    }
 
     Matrix(int width, int height) : width(width), height(height)
     {
+        static_assert(std::is_arithmetic_v<T> , "Wrong type given. Matrix can't be created");
         array = newArray(width, height);
     }
 
@@ -31,12 +36,20 @@ public:
         delete array;
     }
 
-    
+    Matrix transpose()
+    {
+        T ** result = new T*[width];
+        for(int i = 0; i < width; i++)
+        {
+            result[i] = getColumn(i);
+        }
+        return {result, height, width};
+    }
 
     Matrix operator + (Matrix &other)
     {
         if(width != other.width || height != other.height) return *this; //TODO add an exception
-        int ** result = newArray(width, height);
+        T ** result = newArray(width, height);
         for(int i = 0; i < height; i++)
             for(int j = 0; j < width; j++)
                 result[i][j] = array[i][j] + other.array[i][j];
@@ -46,16 +59,16 @@ public:
     Matrix operator - (Matrix &other)
     {
         if(width != other.width || height != other.height) return *this; //TODO add an exception
-        int ** result = newArray(width, height);
+        T ** result = newArray(width, height);
         for(int i = 0; i < height; i++)
             for(int j = 0; j < width; j++)
                 result[i][j] = array[i][j] - other.array[i][j];
         return {result, width, height};
     }
 
-    Matrix operator * (int multiplier)
+    Matrix operator * (T multiplier)
     {
-        int **result = newArray(width, height);
+        T **result = newArray(width, height);
         for(int i = 0; i < height; i++)
             for(int j = 0; j < width; j++)
                 result[i][j] = array[i][j] * multiplier;
@@ -70,15 +83,15 @@ public:
         //setting up new array
         int resultWidth = other.width;
         int resultHeight = height;
-        int ** result = newArray(other.width, height);
+        T ** result = newArray(other.width, height);
         //multiplying
         for(int i = 0; i < resultHeight; i++)
         {
             for(int j = 0; j < resultWidth; j++)
             {
                 int number = 0;
-                int * row = getRow(i);
-                int * column = other.getColumn(j);
+                T * row = getRow(i);
+                T * column = other.getColumn(j);
                 for(int x = 0; x < width; x++)
                 {
                     number += row[x] * column[x];
@@ -91,20 +104,20 @@ public:
         return {result, resultWidth, resultHeight};
     }
 
-    static int **newArray(int width, int height)
+    static T **newArray(int width, int height)
     {
-        int ** result = new int * [height];
+        T ** result = new T * [height];
         for(int i = 0; i < height; i++)
         {
-            result[i] = new int [width]{0};
+            result[i] = new T [width]{0};
         }
         return result;
     }
 
-    int * getRow(int index)
+    T * getRow(int index)
     {
-        if(index > width || index < 0) return nullptr;//TODO add exception
-        int * row = new int[width];
+        if(index > height || index < 0) return nullptr;//TODO add exception
+        T * row = new T[width];
         for(int i = 0; i < width; i++)
         {
             row[i] = array[index][i];
@@ -112,10 +125,10 @@ public:
         return row;
     }
 
-    int * getColumn(int index)
+    T * getColumn(int index)
     {
-        if(index > height || index < 0) return nullptr;//TODO add exception
-        int * column = new int [height];
+        if(index > width || index < 0) return nullptr;//TODO add exception
+        T * column = new T [height];
         for(int i = 0; i < height; i++)
         {
             column[i] = array[i][index];
@@ -123,7 +136,7 @@ public:
         return column;
     }
 
-    int **getArray() const
+    T **getArray() const
     {
         return array;
     }
@@ -156,7 +169,7 @@ public:
             os<<"[";
             for (int j = 0; j < matrix.width; j++)
             {
-                std::cout<< matrix.array[i][j];
+                os<< matrix.array[i][j];
                 if (j != matrix.width - 1) os << ",\t";
             }
             os<<"]\n";
