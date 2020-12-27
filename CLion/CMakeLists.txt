@@ -3,4 +3,4 @@ project(CLion)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(CLion main.cpp SmartPointer.h Tab.h print.h CTable.h)
+add_executable(CLion main.cpp SmartPointer.h Tab.h print.h CTable.h matrixes/Matrix.cpp matrixes/Matrix.h)

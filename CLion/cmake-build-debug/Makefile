@@ -154,6 +154,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion.dir\main.cpp.s
 .PHONY : main.cpp.s
 
+matrixes\Matrix.obj: matrixes\Matrix.cpp.obj
+
+.PHONY : matrixes\Matrix.obj
+
+# target to build an object file
+matrixes\Matrix.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion.dir\matrixes\Matrix.cpp.obj
+.PHONY : matrixes\Matrix.cpp.obj
+
+matrixes\Matrix.i: matrixes\Matrix.cpp.i
+
+.PHONY : matrixes\Matrix.i
+
+# target to preprocess a source file
+matrixes\Matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion.dir\matrixes\Matrix.cpp.i
+.PHONY : matrixes\Matrix.cpp.i
+
+matrixes\Matrix.s: matrixes\Matrix.cpp.s
+
+.PHONY : matrixes\Matrix.s
+
+# target to generate assembly for a file
+matrixes\Matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion.dir\matrixes\Matrix.cpp.s
+.PHONY : matrixes\Matrix.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -166,6 +193,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... matrixes/Matrix.obj
+	@echo ... matrixes/Matrix.i
+	@echo ... matrixes/Matrix.s
 .PHONY : help
 
 

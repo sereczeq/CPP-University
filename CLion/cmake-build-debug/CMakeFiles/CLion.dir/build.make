@@ -80,17 +80,38 @@ CMakeFiles\CLion.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CLion.dir\main.cpp.s /c D:\Kod\C++\CLion\main.cpp
 <<
 
+CMakeFiles\CLion.dir\matrixes\Matrix.cpp.obj: CMakeFiles\CLion.dir\flags.make
+CMakeFiles\CLion.dir\matrixes\Matrix.cpp.obj: ..\matrixes\Matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Kod\C++\CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CLion.dir/matrixes/Matrix.cpp.obj"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CLion.dir\matrixes\Matrix.cpp.obj /FdCMakeFiles\CLion.dir\ /FS -c D:\Kod\C++\CLion\matrixes\Matrix.cpp
+<<
+
+CMakeFiles\CLion.dir\matrixes\Matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CLion.dir/matrixes/Matrix.cpp.i"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe > CMakeFiles\CLion.dir\matrixes\Matrix.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Kod\C++\CLion\matrixes\Matrix.cpp
+<<
+
+CMakeFiles\CLion.dir\matrixes\Matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CLion.dir/matrixes/Matrix.cpp.s"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CLion.dir\matrixes\Matrix.cpp.s /c D:\Kod\C++\CLion\matrixes\Matrix.cpp
+<<
+
 # Object files for target CLion
 CLion_OBJECTS = \
-"CMakeFiles\CLion.dir\main.cpp.obj"
+"CMakeFiles\CLion.dir\main.cpp.obj" \
+"CMakeFiles\CLion.dir\matrixes\Matrix.cpp.obj"
 
 # External object files for target CLion
 CLion_EXTERNAL_OBJECTS =
 
 CLion.exe: CMakeFiles\CLion.dir\main.cpp.obj
+CLion.exe: CMakeFiles\CLion.dir\matrixes\Matrix.cpp.obj
 CLion.exe: CMakeFiles\CLion.dir\build.make
 CLion.exe: CMakeFiles\CLion.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Kod\C++\CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CLion.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Kod\C++\CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CLion.exe"
 	"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\CLion.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\CLion.dir\objects1.rsp @<<
  /out:CLion.exe /implib:CLion.lib /pdb:D:\Kod\C++\CLion\cmake-build-debug\CLion.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

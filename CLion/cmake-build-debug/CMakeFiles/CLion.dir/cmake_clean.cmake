@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CLion.lib"
   "CLion.pdb"
   "CMakeFiles/CLion.dir/main.cpp.obj"
+  "CMakeFiles/CLion.dir/matrixes/Matrix.cpp.obj"
 )
 
 # Per-language clean rules from dependency scanning.
