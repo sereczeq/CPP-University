@@ -37,7 +37,6 @@ private:
             }
         }
 
-    private:
         static T ** getArrayWithout(T** array, int width, int height, int row, int column)
         {
             //create new array
@@ -97,15 +96,28 @@ public:
         return Determinant().calculateDeterminant(array, width, height);
     }
 
-//    Matrix inverse()
-//    {
-//        if(width != height) return *this; //TODO add an exception
-//        T ** result = newArray();
-//        for(int i = 0; i < height; i++)
-//        {
-//            for()
-//        }
-//    }
+    Matrix inverse()
+    {
+        if(width != height) return *this; //TODO add an exception
+        // step 1 - transpose
+        Matrix matrix = transpose();
+
+        // step 2 - make matrix of cofactors (matrix containing determinants)
+        for(int i = 0; i < height; i++)
+        {
+            for(int j = 0; j < width; j++)
+            {
+                matrix.array[i][j] = matrix.array[i][j] * Determinant().calculateDeterminant(Determinant().getArrayWithout(matrix.array, width, height, i, j), width - 1, height -1);
+            }
+        }
+
+        // step 3 - make matrix adjugate (multiply every second element by -1)
+        for(int i = 0, counter = 0; i <height; i++)
+            for(int j = 0; j < width; j++, counter++)
+                if(counter % 2 ==1) matrix.array[i][j] *= -1;
+        // step 4 - divide adjugate matrix by determinant
+        return matrix * (1.0f/Determinant().calculateDeterminant(matrix.array, width, height));
+    }
 
     Matrix operator + (Matrix &other)
     {

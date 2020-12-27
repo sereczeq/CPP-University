@@ -117,10 +117,10 @@ int main() {
 //print(matrix1.transpose());
 //print(matrix1 * matrix2);
 
-//Matrix<int> matrix1(new int* [] {new int[]{10, 0, -3},
-//                                        new int[]{-2, -4, 1},
-//                                        new int[]{3, 0, 2}}, 3, 3);
-//print(matrix1.determinant());
+Matrix<float> matrix1(new float* [] {new float[]{1, 2}, new float[]{3, 4}}, 2, 2);
+print(matrix1);
+print("inverse:");
+print(matrix1.inverse());
 
 //Matrix<int> matrix1(new int * []{new int[]{12, 67, 2, 53},
 //                            new int[]{23, 4, 4, 23},
@@ -128,12 +128,12 @@ int main() {
 //                            new int[]{6, 46, 34, 6}}, 4, 4);
 //print(matrix1.determinant());
 
-Matrix<int> matrix1(new int * []{  new int[]{1, 1, 1, 0, 2},
-                                        new int[]{2, 2, 2, 2, 3},
-                                        new int[]{3, 0, 3, 3, 4},
-                                        new int[]{4, 4, 4, 4, 5},
-                                        new int[]{5, 5, 7, 5, 6}}, 5, 5);
-print(matrix1.determinant());
+//Matrix<int> matrix1(new int * []{  new int[]{1, 1, 1, 0, 2},
+//                                        new int[]{2, 2, 2, 2, 3},
+//                                        new int[]{3, 0, 3, 3, 4},
+//                                        new int[]{4, 4, 4, 4, 5},
+//                                        new int[]{5, 5, 7, 5, 6}}, 5, 5);
+//print(matrix1.inverse());
 
 return 0;
 }
