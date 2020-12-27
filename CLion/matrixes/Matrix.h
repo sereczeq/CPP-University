@@ -19,7 +19,7 @@ private:
     class Determinant
     {
     public:
-        static int calculateDeterminant(T ** array, int width, int height)
+        static T calculateDeterminant(T ** array, int width, int height)
         {
             if(width != height) return 0; //TODO thrown an exception
             if(width == 1) return array[0][0];
@@ -91,14 +91,15 @@ public:
         return {result, height, width};
     }
 
-    int determinant()
+    T determinant()
     {
         return Determinant().calculateDeterminant(array, width, height);
     }
 
-    Matrix inverse()
+    Matrix<float> inverse()
     {
-        if(width != height) return *this; //TODO add an exception
+        //if(width != height) return *this; //TODO add an exception
+
         // step 1 - transpose
         Matrix matrix = transpose();
 
@@ -116,9 +117,21 @@ public:
             for(int j = 0; j < width; j++, counter++)
                 if(counter % 2 ==1) matrix.array[i][j] *= -1;
         // step 4 - divide adjugate matrix by determinant
-        return matrix * (1.0f/Determinant().calculateDeterminant(matrix.array, width, height));
+        return matrix  * (1.0f/(float)Determinant().calculateDeterminant(matrix.array, width, height));
     }
 
+
+    Matrix<float> operator * (float multiplier)
+    {
+        print(multiplier);
+        //T **result = newArray(width, height);
+        float ** result = new float*[height];
+        for(int i = 0; i < height; i++) result[i] = new float[width];
+        for(int i = 0; i < height; i++)
+            for(int j = 0; j < width; j++)
+                result[i][j] = array[i][j] * multiplier;
+        return {result, width, height};
+    }
     Matrix operator + (Matrix &other)
     {
         if(width != other.width || height != other.height) return *this; //TODO add an exception
@@ -139,14 +152,6 @@ public:
         return {result, width, height};
     }
 
-    Matrix operator * (T multiplier)
-    {
-        T **result = newArray(width, height);
-        for(int i = 0; i < height; i++)
-            for(int j = 0; j < width; j++)
-                result[i][j] = array[i][j] * multiplier;
-        return {result, width, height};
-    }
 
 
 
@@ -232,6 +237,20 @@ public:
     bool operator!=(const Matrix &rhs) const
     {
         return !(rhs == *this);
+    }
+
+    explicit operator Matrix<float>() const
+    {
+        float ** result = new float * [height];
+        for(int i = 0; i < height; i++)
+        {
+            result[i] = new float [width]{0};
+            for(int j = 0; j < width; j++)
+            {
+                result[i][j] = (float)array[i][j];
+            }
+        }
+        return Matrix<float>(result, width, height);
     }
 
     friend std::ostream &operator<<(std::ostream &os, const Matrix &matrix)
