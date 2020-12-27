@@ -120,8 +120,8 @@ int main() {
 //Matrix<float> matrix1(new float* [] {new float[]{1, 2}, new float[]{3, 4}}, 2, 2);
 //print(matrix1);
     Matrix<int> matrix1(new int* [] {new int[]{1, 2}, new int[]{3, 4}}, 2, 2);
-//    print(matrix1);
-//print("inverse:");
+print(matrix1);
+print("inverse:");
 print(matrix1.inverse());
 
 
