@@ -153,7 +153,7 @@ int main() {
 //                                        new int[]{5, 5, 7, 5, 6}}, 5, 5);
 //print(matrix1.inverse());
 
-Matrix<double> matrix1("D:\\Kod\\C++\\CLion\\array.txt", 6, 3);
+Matrix<double> matrix1(R"(D:\Kod\C++\CLion\array.txt)", 6, 3);
 print(matrix1);
 
 return 0;

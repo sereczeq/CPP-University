@@ -129,7 +129,8 @@ public:
             throw MatrixException("Inverse cannot be calculated for not square matrix");
 
         // step 1 - calculate multiplier (1 / determinant)
-        float multiplier = 1.0f / Determinant().calculateDeterminant(array, width, height);
+        float determinant = Determinant().calculateDeterminant(array, width, height);
+        if(determinant == 0) throw MatrixException("This matrix does not have an inverse");
 
         // step 2 - transpose
         Matrix matrix = transpose();
@@ -149,7 +150,7 @@ public:
             for (int j = 0; j < width; j++, counter++)
                 if (counter % 2 == 1) matrix.array[i][j] *= -1;
         // step 5 - multiply adjacent matrix by 1 / determinant
-        return matrix * multiplier;
+        return matrix * (1.0f/determinant);
     }
 
     //always return float type Matrix for safety

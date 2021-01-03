@@ -12,13 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bd20256-b0e6-4fad-b6d2-dea08c89f6b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/matrixes/MatrixException.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CLion.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CLion.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CLion.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CLion.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CLion.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CLion.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/matrixes/Matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/matrixes/Matrix.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +77,7 @@
       <workItem from="1608633417151" duration="3477000" />
       <workItem from="1609066164672" duration="22943000" />
       <workItem from="1609102945400" duration="922000" />
-      <workItem from="1609678875992" duration="10338000" />
+      <workItem from="1609678875992" duration="10471000" />
     </task>
     <servers />
   </component>
