@@ -6,9 +6,11 @@ CMakeFiles\CLion.dir\main.cpp.obj: ..\SmartPointer.h
 CMakeFiles\CLion.dir\main.cpp.obj: ..\Tab.h
 CMakeFiles\CLion.dir\main.cpp.obj: ..\main.cpp
 CMakeFiles\CLion.dir\main.cpp.obj: ..\matrixes\Matrix.h
+CMakeFiles\CLion.dir\main.cpp.obj: ..\matrixes\MatrixException.h
 CMakeFiles\CLion.dir\main.cpp.obj: ..\print.h
 
 CMakeFiles\CLion.dir\matrixes\Matrix.cpp.obj: ..\matrixes\Matrix.cpp
 CMakeFiles\CLion.dir\matrixes\Matrix.cpp.obj: ..\matrixes\Matrix.h
+CMakeFiles\CLion.dir\matrixes\Matrix.cpp.obj: ..\matrixes\MatrixException.h
 CMakeFiles\CLion.dir\matrixes\Matrix.cpp.obj: ..\print.h
 

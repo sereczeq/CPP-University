@@ -119,14 +119,24 @@ int main() {
 
 //Matrix<float> matrix1(new float* [] {new float[]{1, 2}, new float[]{3, 4}}, 2, 2);
 //print(matrix1);
-Matrix<int> matrix1(new int* [] {new int[]{1, 2}, new int[]{3, 4}}, 2, 2);
+//Matrix<int> matrix1(new int* [] {new int[]{1, 2, 3}, new int[]{3, 4, 3}}, 3, 2);
+//try {
+//   // matrix1.getColumn(-1);
+//print(matrix1.inverse());
+//}
+//catch(MatrixException& e)
+//{
+//    print(e.what());
+//    print("am here");
+//}
+//print("continue");
 //print(matrix1);
 //print("inverse:");
 //print(matrix1.inverse());
 //Matrix<int> matrix1(new int*[]{new int[]{1, -2, 0},
 //                                    new int[]{3, 1, 5},
 //                                    new int[]{-1, 2, 3}}, 3, 3);
-print(matrix1.inverse());
+//print(matrix1.inverse());
 //print(matrix1.inverse());
 
 
@@ -142,6 +152,9 @@ print(matrix1.inverse());
 //                                        new int[]{4, 4, 4, 4, 5},
 //                                        new int[]{5, 5, 7, 5, 6}}, 5, 5);
 //print(matrix1.inverse());
+
+Matrix<double> matrix1("D:\\Kod\\C++\\CLion\\array.txt", 6, 3);
+print(matrix1);
 
 return 0;
 }

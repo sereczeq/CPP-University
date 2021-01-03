@@ -37,10 +37,18 @@ D:/Kod/C++/CLion/matrixes/Matrix.h
 D:/Kod/C++/CLion/matrixes/Matrix.h
 iostream
 -
+fstream
+-
 type_traits
 -
+MatrixException.h
+D:/Kod/C++/CLion/matrixes/MatrixException.h
 ../print.h
 D:/Kod/C++/CLion/print.h
+
+D:/Kod/C++/CLion/matrixes/MatrixException.h
+exception
+-
 
 D:/Kod/C++/CLion/print.h
 
