@@ -11,8 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bd20256-b0e6-4fad-b6d2-dea08c89f6b3" name="Default Changelist" comment="">
+    <list default="true" id="5bd20256-b0e6-4fad-b6d2-dea08c89f6b3" name="Default Changelist" comment="CLion commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CLion.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CLion.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CLion.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CLion.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/matrixes/Matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/matrixes/Matrix.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,12 +31,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1lZ68MdjczqxI2Ct9LV6S9Dtovm" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -77,8 +83,16 @@
       <workItem from="1608633417151" duration="3477000" />
       <workItem from="1609066164672" duration="22943000" />
       <workItem from="1609102945400" duration="922000" />
-      <workItem from="1609678875992" duration="10471000" />
+      <workItem from="1609678875992" duration="11270000" />
     </task>
+    <task id="LOCAL-00001" summary="CLion commit">
+      <created>1609690275862</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609690275862</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +109,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="CLion commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="CLion commit" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

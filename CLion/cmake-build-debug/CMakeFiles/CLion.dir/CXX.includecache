@@ -34,12 +34,18 @@ D:/Kod/C++/CLion/CTable.h
 matrixes/Matrix.h
 D:/Kod/C++/CLion/matrixes/Matrix.h
 
+D:/Kod/C++/CLion/matrixes/Matrix.cpp
+Matrix.h
+D:/Kod/C++/CLion/matrixes/Matrix.h
+
 D:/Kod/C++/CLion/matrixes/Matrix.h
 iostream
 -
 fstream
 -
 type_traits
+-
+assert.h
 -
 MatrixException.h
 D:/Kod/C++/CLion/matrixes/MatrixException.h

@@ -154,7 +154,7 @@ int main() {
 //print(matrix1.inverse());
 
 Matrix<double> matrix1(R"(D:\Kod\C++\CLion\array.txt)", 6, 3);
-print(matrix1);
+print(matrix1.inverse());
 
 return 0;
 }

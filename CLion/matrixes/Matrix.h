@@ -8,7 +8,6 @@
 #include<iostream>
 #include <fstream>
 #include <type_traits>
-#include <assert.h>
 #include "MatrixException.h"
 #include "../print.h"
 
@@ -23,6 +22,7 @@ private:
     class Determinant
     {
     public:
+        ///Throws an exception if matrix is not square.
         static T calculateDeterminant(T **array, int width, int height)
         {
             if (width != height) throw MatrixException("Can't calculate determinant of not square matrix");
@@ -46,6 +46,7 @@ private:
             }
         }
 
+        ///Returns a pointer array of given type, array does not contain specified row and column.
         static T **getArrayWithout(T **array, int width, int height, int row, int column)
         {
             //create new array
@@ -83,7 +84,8 @@ public:
         array = newArray(width, height);
     }
 
-    //will fill matrix with zeros in case of wrong dimensions
+    /// User has to use correct type
+    /// In case of wrong dimensions, matrix will be filled with zeros
     Matrix(const std::string& filePath, int width, int height): width(width), height(height)
     {
         std::ifstream file(filePath);
@@ -122,7 +124,8 @@ public:
         return Determinant().getArrayWithout(array, width, height, row, column);
     }
 
-    //returns float type Matrix; to make an inverse we have to divide numbers
+    ///Returns float type Matrix; to make an inverse we have to divide numbers.
+    ///Throws an exception when matrix is not square.
     Matrix<float> inverse()
     {
         if (width != height)
@@ -153,7 +156,7 @@ public:
         return matrix * (1.0f/determinant);
     }
 
-    //always return float type Matrix for safety
+    ///Returns float type Matrix for safety
     Matrix<float> operator*(float multiplier)
     {
         //create array of floats
@@ -166,6 +169,7 @@ public:
         return {result, width, height};
     }
 
+    ///Throws an exception if dimensions do not match
     Matrix operator+(Matrix &other)
     {
         if (width != other.width || height != other.height) throw MatrixException("cannot add matrices of different sizes");
@@ -176,6 +180,7 @@ public:
         return {result, width, height};
     }
 
+    ///Throws an exception if dimensions do not match
     Matrix operator-(Matrix &other)
     {
         if (width != other.width || height != other.height) throw MatrixException("cannot subtract matrices of different sizes");
@@ -186,6 +191,7 @@ public:
         return {result, width, height};
     }
 
+    ///Throws an exception if dimensions do not match
     Matrix operator*(Matrix &other)
     {
         if (width != other.height) throw MatrixException("cannot multiply matrices without matching dimensions");
