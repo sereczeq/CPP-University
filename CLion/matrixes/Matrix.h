@@ -15,14 +15,19 @@ private:
     T** array;
     int width;
     int height;
-
-    class Determinant
+public:
+    class Determinant //TODO make private later
     {
     public:
         static T calculateDeterminant(T ** array, int width, int height)
         {
+            print("array given for determinant: ");
+            for(int i = 0; i < width; i++) for(int j = 0; j < height; j++) print(array[i][j]);
             if(width != height) return 0; //TODO thrown an exception
-            if(width == 1) return array[0][0];
+            if(width == 1) {
+                auto x = array[0][0];
+                return x;
+            }
             else if(width == 2) return array[0][0] * array[1][1] - array[0][1] * array[1][0];
             else
             {
@@ -60,7 +65,6 @@ private:
             return result;
         }
     };
-public:
     Matrix(T **array, int width, int height) : array(array), width(width), height(height)
     {
         static_assert(std::is_arithmetic_v<T> , "Wrong type given. Matrix can't be created");
@@ -95,29 +99,46 @@ public:
     {
         return Determinant().calculateDeterminant(array, width, height);
     }
+    T** getArrayWithout(int row, int column)
+    {
+        return Determinant().getArrayWithout(array, width, height, row, column);
+    }
 
     Matrix<float> inverse()
     {
         //if(width != height) return *this; //TODO add an exception
 
-        // step 1 - transpose
-        Matrix matrix = transpose();
+        // step 1 - calculate multiplier
+        float multiplier = 1.0f/ Determinant().calculateDeterminant(array, width, height);
 
-        // step 2 - make matrix of cofactors (matrix containing determinants)
+        // step 2 - transpose
+        Matrix matrix = transpose();
+        print("transpose\n"<<matrix);
+
+        // step 3 - make matrix of minors (matrix containing determinants)
+
+        // make a new array to store determinants (otherwise determinants would be wrongly used in next calculations)
+        T** temp = newArray(width, height);
+
         for(int i = 0; i < height; i++)
         {
             for(int j = 0; j < width; j++)
             {
-                matrix.array[i][j] = matrix.array[i][j] * Determinant().calculateDeterminant(Determinant().getArrayWithout(matrix.array, width, height, i, j), width - 1, height -1);
+                temp[i][j] = Determinant().calculateDeterminant(matrix.getArrayWithout(i, j), width - 1, height - 1);
+                print("elem: " << temp[i][j]);
             }
         }
+        delete [] matrix.array;
+        matrix.array = temp;
+        print("minors\n"<<matrix);
 
-        // step 3 - make matrix adjugate (multiply every second element by -1)
+        // step 4 - make cofactor matrix  (multiply every second element by -1)
         for(int i = 0, counter = 0; i <height; i++)
             for(int j = 0; j < width; j++, counter++)
                 if(counter % 2 ==1) matrix.array[i][j] *= -1;
-        // step 4 - divide adjugate matrix by determinant
-        return matrix  * (1.0f/(float)Determinant().calculateDeterminant(matrix.array, width, height));
+        print("cofactors\n"<<matrix);
+        // step 5 - multiply adjacent matrix by 1 / determinant
+        return matrix  * multiplier;
     }
 
 

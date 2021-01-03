@@ -119,11 +119,15 @@ int main() {
 
 //Matrix<float> matrix1(new float* [] {new float[]{1, 2}, new float[]{3, 4}}, 2, 2);
 //print(matrix1);
-    Matrix<int> matrix1(new int* [] {new int[]{1, 2}, new int[]{3, 4}}, 2, 2);
-print(matrix1);
-print("inverse:");
+Matrix<int> matrix1(new int* [] {new int[]{1, 2}, new int[]{3, 4}}, 2, 2);
+//print(matrix1);
+//print("inverse:");
+//print(matrix1.inverse());
+//Matrix<int> matrix1(new int*[]{new int[]{1, -2, 0},
+//                                    new int[]{3, 1, 5},
+//                                    new int[]{-1, 2, 3}}, 3, 3);
 print(matrix1.inverse());
-
+//print(matrix1.inverse());
 
 
 //Matrix<int> matrix1(new int * []{new int[]{12, 67, 2, 53},
