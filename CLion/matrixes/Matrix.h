@@ -18,59 +18,6 @@ private:
     T **array;
     int width;
     int height;
-
-    class Determinant
-    {
-    public:
-        ///Throws an exception if matrix is not square.
-        static T calculateDeterminant(T **array, int width, int height)
-        {
-            if (width != height) throw MatrixException("Can't calculate determinant of not square matrix");
-            if (width == 1)
-            {
-                auto x = array[0][0];
-                return x;
-            } else if (width == 2) return array[0][0] * array[1][1] - array[0][1] * array[1][0];
-            else
-            {
-                int determinant = 0;
-                for (int i = 0; i < width; i++)
-                {
-                    int sign = 1;
-                    if (i % 2 == 1) sign = -1;
-                    determinant += sign * array[0][i] *
-                                   calculateDeterminant(getArrayWithout(array, width, height, 0, i), width - 1,
-                                                        height - 1);
-                }
-                return determinant;
-            }
-        }
-
-        ///Returns a pointer array of given type, array does not contain specified row and column.
-        static T **getArrayWithout(T **array, int width, int height, int row, int column)
-        {
-            //create new array
-            T **result = new T *[--height];
-            for (int i = 0; i < height; i++)
-            {
-                result[i] = new T[width - 1];
-            }
-
-            //copy contents (except this one row an column)
-            for (int i = 0, x = 0; i < height; i++, x++)
-            {
-                if (i == row) x++; // skip the row
-                for (int j = 0, y = 0; j < width - 1; j++, y++)
-                {
-                    if (j == column) y++; // skip the column
-                    result[i][j] = array[x][y];
-                }
-            }
-
-            return result;
-        }
-    };
-
 public:
 
     Matrix(T **array, int width, int height) : array(array), width(width), height(height)
@@ -86,7 +33,7 @@ public:
 
     /// User has to use correct type
     /// In case of wrong dimensions, matrix will be filled with zeros
-    Matrix(const std::string& filePath, int width, int height): width(width), height(height)
+    Matrix(const std::string &filePath, int width, int height) : width(width), height(height)
     {
         std::ifstream file(filePath);
         if (!file.is_open()) throw std::exception("File not found");
@@ -114,14 +61,64 @@ public:
         return {result, height, width};
     }
 
-    T determinant()
+    ///Throws an exception if matrix is not square.
+    T calculateDeterminant()
     {
-        return Determinant().calculateDeterminant(array, width, height);
+        return calculateDeterminant(array, width, height);
     }
 
+    static T calculateDeterminant(T** array, int width, int height)
+    {
+        if (width != height) throw MatrixException("Can't calculate calculateDeterminant of not square matrix");
+        if (width == 1)
+        {
+            auto x = array[0][0];
+            return x;
+        }
+        else if (width == 2) return array[0][0] * array[1][1] - array[0][1] * array[1][0];
+        else
+        {
+            int det = 0;
+            for (int i = 0; i < width; i++)
+            {
+                int sign = 1;
+                if (i % 2 == 1) sign = -1;
+                det += sign * array[0][i] *
+                        calculateDeterminant(getArrayWithout(array, width, height, 0, i), width - 1,
+                                             height - 1);
+            }
+            return det;
+        }
+    }
+
+    ///Returns a pointer array of given type, new array does not contain specified row and column.
     T **getArrayWithout(int row, int column)
     {
-        return Determinant().getArrayWithout(array, width, height, row, column);
+        return getArrayWithout(array, width, height, row, column);
+    }
+
+    ///Returns a pointer array of given type, new array does not contain specified row and column.
+    static T **getArrayWithout(T **array, int width, int height, int row, int column)
+    {
+        //create new array
+        T **result = new T *[--height];
+        for (int i = 0; i < height; i++)
+        {
+            result[i] = new T[width - 1];
+        }
+
+        //copy contents (except this one row an column)
+        for (int i = 0, x = 0; i < height; i++, x++)
+        {
+            if (i == row) x++; // skip the row
+            for (int j = 0, y = 0; j < width - 1; j++, y++)
+            {
+                if (j == column) y++; // skip the column
+                result[i][j] = array[x][y];
+            }
+        }
+
+        return result;
     }
 
     ///Returns float type Matrix; to make an inverse we have to divide numbers.
@@ -131,9 +128,9 @@ public:
         if (width != height)
             throw MatrixException("Inverse cannot be calculated for not square matrix");
 
-        // step 1 - calculate multiplier (1 / determinant)
-        float determinant = Determinant().calculateDeterminant(array, width, height);
-        if(determinant == 0) throw MatrixException("This matrix does not have an inverse");
+        // step 1 - calculate multiplier (1 / calculateDeterminant)
+        float determinant = calculateDeterminant(array, width, height);
+        if (determinant == 0) throw MatrixException("This matrix does not have an inverse");
 
         // step 2 - transpose
         Matrix matrix = transpose();
@@ -144,7 +141,7 @@ public:
         T **temp = newArray(width, height);
         for (int i = 0; i < height; i++)
             for (int j = 0; j < width; j++)
-                temp[i][j] = Determinant().calculateDeterminant(matrix.getArrayWithout(i, j), width - 1, height - 1);
+                temp[i][j] = calculateDeterminant(matrix.getArrayWithout(i, j), width - 1, height - 1);
         delete[] matrix.array;
         matrix.array = temp;
 
@@ -152,8 +149,8 @@ public:
         for (int i = 0, counter = 0; i < height; i++)
             for (int j = 0; j < width; j++, counter++)
                 if (counter % 2 == 1) matrix.array[i][j] *= -1;
-        // step 5 - multiply adjacent matrix by 1 / determinant
-        return matrix * (1.0f/determinant);
+        // step 5 - multiply adjacent matrix by 1 / calculateDeterminant
+        return matrix * (1.0f / determinant);
     }
 
     ///Returns float type Matrix for safety
@@ -172,7 +169,8 @@ public:
     ///Throws an exception if dimensions do not match
     Matrix operator+(Matrix &other)
     {
-        if (width != other.width || height != other.height) throw MatrixException("cannot add matrices of different sizes");
+        if (width != other.width || height != other.height)
+            throw MatrixException("cannot add matrices of different sizes");
         T **result = newArray(width, height);
         for (int i = 0; i < height; i++)
             for (int j = 0; j < width; j++)
@@ -183,7 +181,8 @@ public:
     ///Throws an exception if dimensions do not match
     Matrix operator-(Matrix &other)
     {
-        if (width != other.width || height != other.height) throw MatrixException("cannot subtract matrices of different sizes");
+        if (width != other.width || height != other.height)
+            throw MatrixException("cannot subtract matrices of different sizes");
         T **result = newArray(width, height);
         for (int i = 0; i < height; i++)
             for (int j = 0; j < width; j++)
@@ -194,6 +193,19 @@ public:
     ///Throws an exception if dimensions do not match
     Matrix operator*(Matrix &other)
     {
+        //Matrix * Vector
+        if (other.width == 1 && height == other.height)
+        {
+            T **result = newArray(width, height);
+            for (int i = 0; i < height; i++)
+                for (int j = 0; j < width; j++)
+                {
+                    result[i][j] = array[i][j] * other.array[0][i];
+                }
+            return {result, width, height};
+        }
+
+        //Matrix * matrix
         if (width != other.height) throw MatrixException("cannot multiply matrices without matching dimensions");
         //setting up new array
         int resultWidth = other.width;
@@ -251,6 +263,8 @@ public:
         }
         return column;
     }
+
+
 
     T **getArray() const
     {

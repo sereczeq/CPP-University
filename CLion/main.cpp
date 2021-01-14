@@ -144,17 +144,18 @@ int main() {
 //                            new int[]{23, 4, 4, 23},
 //                            new int[]{32, 5, 43, 1},
 //                            new int[]{6, 46, 34, 6}}, 4, 4);
-//print(matrix1.determinant());
+//print(matrix1.calculateDeterminant());
 
-//Matrix<int> matrix1(new int * []{  new int[]{1, 1, 1, 0, 2},
-//                                        new int[]{2, 2, 2, 2, 3},
-//                                        new int[]{3, 0, 3, 3, 4},
-//                                        new int[]{4, 4, 4, 4, 5},
-//                                        new int[]{5, 5, 7, 5, 6}}, 5, 5);
+Matrix<int> matrix1(new int * []{  new int[]{1, 1, 1, 0, 2},
+                                        new int[]{2, 2, 2, 2, 3},
+                                        new int[]{3, 0, 3, 3, 4},
+                                        new int[]{4, 4, 4, 4, 5},
+                                        new int[]{5, 5, 7, 5, 6}}, 5, 5);
+print(matrix1.inverse());
+
+//Matrix<double> matrix1(R"(D:\Kod\C++\CLion\array.txt)", 6, 3);
 //print(matrix1.inverse());
 
-Matrix<double> matrix1(R"(D:\Kod\C++\CLion\array.txt)", 6, 3);
-print(matrix1.inverse());
 
 return 0;
 }
