@@ -31,14 +31,10 @@ print.h
 D:/Kod/C++/CLion/print.h
 CTable.h
 D:/Kod/C++/CLion/CTable.h
-matrixes/Matrix.h
-D:/Kod/C++/CLion/matrixes/Matrix.h
+matrices/Matrix.h
+D:/Kod/C++/CLion/matrices/Matrix.h
 
-D:/Kod/C++/CLion/matrixes/Matrix.cpp
-Matrix.h
-D:/Kod/C++/CLion/matrixes/Matrix.h
-
-D:/Kod/C++/CLion/matrixes/Matrix.h
+D:/Kod/C++/CLion/matrices/Matrix.h
 iostream
 -
 fstream
@@ -46,11 +42,11 @@ fstream
 type_traits
 -
 MatrixException.h
-D:/Kod/C++/CLion/matrixes/MatrixException.h
+D:/Kod/C++/CLion/matrices/MatrixException.h
 ../print.h
 D:/Kod/C++/CLion/print.h
 
-D:/Kod/C++/CLion/matrixes/MatrixException.h
+D:/Kod/C++/CLion/matrices/MatrixException.h
 exception
 -
 

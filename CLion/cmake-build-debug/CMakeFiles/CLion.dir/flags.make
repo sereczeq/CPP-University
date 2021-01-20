@@ -6,5 +6,5 @@ CXX_FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -ID:\Kod\C++\CLion\src -ID:\Kod\C++\CLion\googletest-master\googlemock\include -ID:\Kod\C++\CLion\googletest-master\googletest\include 
 

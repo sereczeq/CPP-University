@@ -5,13 +5,67 @@
 		<Option title="CLion"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\googletest-master\;CMake Files\googletest-master\googlemock\;CMake Files\googletest-master\googlemock\cmake\;CMake Files\googletest-master\googletest\;CMake Files\googletest-master\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="config_test">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/config_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 config_test"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="config_test/fast">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/config_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 config_test/fast"/>
 					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
@@ -24,6 +78,9 @@
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
@@ -46,6 +103,9 @@
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
@@ -61,6 +121,90 @@
 					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="config_run">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/config_run.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 config_run"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="config_run/fast">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/config_run.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 config_run/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 install/local"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 install"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug"/>
 				<Option type="4"/>
@@ -71,14 +215,226 @@
 					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rebuild_cache">
+			<Target title="list_install_components">
 				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 list_install_components"/>
 					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/lib/gmock_maind.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 gmock_main"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main/fast">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/lib/gmock_maind.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/lib/gmockd.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 gmock"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock/fast">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/lib/gmockd.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug/googletest-master/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 gmock/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googlemock\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/lib/gtestd.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 gtest"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/lib/gtestd.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 gtest/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/lib/gtest_maind.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 gtest_main"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="D:/Kod/C++/CLion/cmake-build-debug/lib/gtest_maind.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Kod/C++/CLion/cmake-build-debug/googletest-master/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/Kod/C++/CLion/src"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googlemock/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest/include"/>
+					<Add directory="D:/Kod/C++/CLion/googletest-master/googletest"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\Kod\C++\CLion\cmake-build-debug\googletest-master\googletest\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -91,23 +447,66 @@
 		<Unit filename="D:/Kod/C++/CLion/Tab.h">
 			<Option target="CLion"/>
 		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googlemock/src/gmock-all.cc">
+			<Option target="gmock_main"/>
+			<Option target="gmock"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googlemock/src/gmock_main.cc">
+			<Option target="gmock_main"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googletest/src/gtest-all.cc">
+			<Option target="gmock_main"/>
+			<Option target="gmock"/>
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
 		<Unit filename="D:/Kod/C++/CLion/main.cpp">
 			<Option target="CLion"/>
+			<Option target="config_run"/>
 		</Unit>
-		<Unit filename="D:/Kod/C++/CLion/matrixes/Matrix.cpp">
+		<Unit filename="D:/Kod/C++/CLion/matrices/Matrix.h">
 			<Option target="CLion"/>
 		</Unit>
-		<Unit filename="D:/Kod/C++/CLion/matrixes/Matrix.h">
+		<Unit filename="D:/Kod/C++/CLion/matrices/MatrixException.h">
 			<Option target="CLion"/>
 		</Unit>
-		<Unit filename="D:/Kod/C++/CLion/matrixes/MatrixException.h">
-			<Option target="CLion"/>
+		<Unit filename="D:/Kod/C++/CLion/matrices/MatrixTest.cpp">
+			<Option target="config_test"/>
 		</Unit>
 		<Unit filename="D:/Kod/C++/CLion/print.h">
 			<Option target="CLion"/>
 		</Unit>
 		<Unit filename="D:/Kod/C++/CLion/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\googletest-master\"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\googletest-master\googlemock\"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googlemock/cmake/gmock.pc.in">
+			<Option virtualFolder="CMake Files\googletest-master\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googlemock/cmake/gmock_main.pc.in">
+			<Option virtualFolder="CMake Files\googletest-master\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\googletest-master\googletest\"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googletest/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googletest/cmake/gtest.pc.in">
+			<Option virtualFolder="CMake Files\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googletest/cmake/gtest_main.pc.in">
+			<Option virtualFolder="CMake Files\googletest-master\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="D:/Kod/C++/CLion/googletest-master/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\googletest-master\googletest\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

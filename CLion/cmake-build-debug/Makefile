@@ -60,6 +60,41 @@ CMAKE_BINARY_DIR = D:\Kod\C++\CLion\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache\fast: rebuild_cache
+
+.PHONY : rebuild_cache\fast
+
+# Special rule for the target install/local
+install\local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local
+
+# Special rule for the target install/local
+install\local\fast: preinstall\fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local\fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install\fast: preinstall\fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install\fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -71,16 +106,15 @@ edit_cache\fast: edit_cache
 
 .PHONY : edit_cache\fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	echo >nul && "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target rebuild_cache
-rebuild_cache\fast: rebuild_cache
+# Special rule for the target list_install_components
+list_install_components\fast: list_install_components
 
-.PHONY : rebuild_cache\fast
+.PHONY : list_install_components\fast
 
 # The main all target
 all: cmake_check_build_system
@@ -115,6 +149,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named config_test
+
+# Build rule for target.
+config_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) config_test
+.PHONY : config_test
+
+# fast build rule for target.
+config_test\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\config_test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\config_test.dir\build
+.PHONY : config_test\fast
+
+#=============================================================================
 # Target rules for targets named CLion
 
 # Build rule for target.
@@ -127,6 +174,71 @@ CLion\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion.dir\build
 .PHONY : CLion\fast
 
+#=============================================================================
+# Target rules for targets named config_run
+
+# Build rule for target.
+config_run: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) config_run
+.PHONY : config_run
+
+# fast build rule for target.
+config_run\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\config_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\config_run.dir\build
+.PHONY : config_run\fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main\fast:
+	$(MAKE) $(MAKESILENT) -f googletest-master\googlemock\CMakeFiles\gmock_main.dir\build.make /nologo -$(MAKEFLAGS) googletest-master\googlemock\CMakeFiles\gmock_main.dir\build
+.PHONY : gmock_main\fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock\fast:
+	$(MAKE) $(MAKESILENT) -f googletest-master\googlemock\CMakeFiles\gmock.dir\build.make /nologo -$(MAKEFLAGS) googletest-master\googlemock\CMakeFiles\gmock.dir\build
+.PHONY : gmock\fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest\fast:
+	$(MAKE) $(MAKESILENT) -f googletest-master\googletest\CMakeFiles\gtest.dir\build.make /nologo -$(MAKEFLAGS) googletest-master\googletest\CMakeFiles\gtest.dir\build
+.PHONY : gtest\fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main\fast:
+	$(MAKE) $(MAKESILENT) -f googletest-master\googletest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) googletest-master\googletest\CMakeFiles\gtest_main.dir\build
+.PHONY : gtest_main\fast
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -134,6 +246,7 @@ main.obj: main.cpp.obj
 # target to build an object file
 main.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion.dir\main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\config_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\config_run.dir\main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -143,6 +256,7 @@ main.i: main.cpp.i
 # target to preprocess a source file
 main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion.dir\main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\config_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\config_run.dir\main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -152,34 +266,35 @@ main.s: main.cpp.s
 # target to generate assembly for a file
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion.dir\main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\config_run.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\config_run.dir\main.cpp.s
 .PHONY : main.cpp.s
 
-matrixes\Matrix.obj: matrixes\Matrix.cpp.obj
+matrices\MatrixTest.obj: matrices\MatrixTest.cpp.obj
 
-.PHONY : matrixes\Matrix.obj
+.PHONY : matrices\MatrixTest.obj
 
 # target to build an object file
-matrixes\Matrix.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion.dir\matrixes\Matrix.cpp.obj
-.PHONY : matrixes\Matrix.cpp.obj
+matrices\MatrixTest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\config_test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\config_test.dir\matrices\MatrixTest.cpp.obj
+.PHONY : matrices\MatrixTest.cpp.obj
 
-matrixes\Matrix.i: matrixes\Matrix.cpp.i
+matrices\MatrixTest.i: matrices\MatrixTest.cpp.i
 
-.PHONY : matrixes\Matrix.i
+.PHONY : matrices\MatrixTest.i
 
 # target to preprocess a source file
-matrixes\Matrix.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion.dir\matrixes\Matrix.cpp.i
-.PHONY : matrixes\Matrix.cpp.i
+matrices\MatrixTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\config_test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\config_test.dir\matrices\MatrixTest.cpp.i
+.PHONY : matrices\MatrixTest.cpp.i
 
-matrixes\Matrix.s: matrixes\Matrix.cpp.s
+matrices\MatrixTest.s: matrices\MatrixTest.cpp.s
 
-.PHONY : matrixes\Matrix.s
+.PHONY : matrices\MatrixTest.s
 
 # target to generate assembly for a file
-matrixes\Matrix.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion.dir\matrixes\Matrix.cpp.s
-.PHONY : matrixes\Matrix.cpp.s
+matrices\MatrixTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\config_test.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\config_test.dir\matrices\MatrixTest.cpp.s
+.PHONY : matrices\MatrixTest.cpp.s
 
 # Help Target
 help:
@@ -188,14 +303,23 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... CLion
+	@echo ... config_run
+	@echo ... config_test
+	@echo ... gmock
+	@echo ... gmock_main
+	@echo ... gtest
+	@echo ... gtest_main
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... matrixes/Matrix.obj
-	@echo ... matrixes/Matrix.i
-	@echo ... matrixes/Matrix.s
+	@echo ... matrices/MatrixTest.obj
+	@echo ... matrices/MatrixTest.i
+	@echo ... matrices/MatrixTest.s
 .PHONY : help
 
 

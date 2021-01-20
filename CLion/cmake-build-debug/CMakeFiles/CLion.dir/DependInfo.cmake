@@ -5,12 +5,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Kod/C++/CLion/main.cpp" "D:/Kod/C++/CLion/cmake-build-debug/CMakeFiles/CLion.dir/main.cpp.obj"
-  "D:/Kod/C++/CLion/matrixes/Matrix.cpp" "D:/Kod/C++/CLion/cmake-build-debug/CMakeFiles/CLion.dir/matrixes/Matrix.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../src"
+  "../googletest-master/googlemock/include"
+  "../googletest-master/googletest/include"
   )
 
 # Targets to which this target links.
